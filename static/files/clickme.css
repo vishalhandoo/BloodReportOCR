@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+body {
+    background-color: #383838;
+}
+.heading{
+    color:#d897bd;
+    text-shadow: 5px 5px 7px #ff0c9a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    margin-bottom: 50px;
+
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card */
+
+.disease{
+    height: 8vw;
+    width: 35%;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px gainsboro;
+    display: inline-block;
+   
+}
+.disease h1{
+    color: #16a085;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 35px;
+    text-shadow: .2rem .2rem 0 rgba(48, 47, 47, 0.2);
+
+
+}
+
+.name{
+    height: 8vw;
+    width: 35%;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px gainsboro;
+    display: inline-block;
+    margin-left: 13%;
+    margin-right: 40px;
+}
+.name h1{
+    color: #16a085;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 35px;
+    text-shadow: .2rem .2rem 0 rgba(48, 47, 47, 0.2);
+}
+
+.symptoms{
+    flex-direction: column;
+    margin: 10px;
+}
+
+.card {
+    background-color: #fafafa;
+    width: 320px;
+    height: 430px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+    margin-right: 20px;
+}
+
+.card h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #101010;
+}
+
+
+.card .clip{
+    position: absolute;
+    background-color: rgb(11, 226, 11);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+    clip-path: circle(15% at 105% 10%);
+    transition: 0.5s all ease-in-out;
+}
+
+.card .clip h2 {
+    color: #fafafa;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.card:hover .clip{
+    clip-path: circle(150% at 105% 47.5%);
+}
+
+
+
+/* card1 */
+.card1 {
+    background-color: #fafafa;
+    width: 320px;
+    height: 180px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-direction:column; */
+    margin:25px;
+}
+
+.card1 h1 {
+    font-size: 40px;
+    padding: 40px;
+    font-weight: bold;
+    color: #101010;
+}
+
+.card1 .clip1{
+    position: absolute;
+    background-color: rgb(224, 32, 32);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+    clip-path: circle(15% at 105% 10%);
+    transition: 0.5s all ease-in-out;
+}
+.clip1 h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card1:hover .clip1{
+    clip-path: circle(150% at 105% 47.5%);
+}
+
+/* card11 */
+.card11 {
+    background-color: #fafafa;
+    width: 320px;
+    height: 180px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    margin:25px;
+}
+
+.card11 h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #101010;
+    padding: 40px;
+}
+
+.card11 .clip11{
+    position: absolute;
+    background-color: violet;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+    clip-path: circle(15% at 105% 10%);
+    transition: 0.5s all ease-in-out;
+}
+.clip11 h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.card11:hover .clip11{
+    clip-path: circle(150% at 105% 47.5%);
+}
+
+
+
+
+
+/* card2 */
+
+.card2 {
+    background-color: #fafafa;
+    width: 320px;
+    height: 420px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+    margin:25px;
+}
+
+.card2 h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #101010;
+}
+
+.card2 .clip2{
+    position: absolute;
+    background-color: rgb(255, 166, 0);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+    clip-path: circle(15% at 105% 10%);
+    transition: 0.5s all ease-in-out;
+}
+.clip2 h2 {
+    color:#fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card2:hover .clip2{
+    clip-path: circle(150% at 105% 47.5%);
+}

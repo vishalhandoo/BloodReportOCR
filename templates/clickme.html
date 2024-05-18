@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="\static\files\clickme.css">
+</head>
+
+<body>
+
+    <div>
+        <h1 class="heading">RESULT</h1>
+    </div>
+
+    <div class="name">
+        <h1>Name: <span style="color: black; font-size: 30px;">{{ name }}</span></h1>
+    </div>
+
+    <div class="disease">
+        {% for i in out[output][0] %}
+        <h1>Disease: <span style="color: black; font-size: 25px;">{{ i }}</span></h1>
+        {% endfor %}
+    </div>
+
+    <section>
+        <div class="card">
+            <h1>NORMAL</h1><br>
+            <div class="clip">
+                <h1 style="color: black;"> Normal</h1><br>
+                {% for i in out[output][1] %}
+                <p>
+                <h2 style="color: white; font-weight: bold;">{{ i }}</h2><br>
+                </p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="symptoms">
+            <div class="card1">
+                <h1>ABNORMAL</h1><br>
+                <div class="clip1">
+                    <h2 style="color: black;"> Abnormal</h2><br>
+                    {% for i in out[output][2] %}
+                    <h3 style="color: white;">{{ i }}</h3><br>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+            <div class="card11">
+                <h1>SYMPTOMS</h1><br>
+                <div class="clip11">
+                    <h2 style="color: black;"> SYMPTOMS</h2><br>
+                    {% for i in out[output][3] %}
+                    <h3 style="color: white;">{{ i }}</h3><br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="card2">
+            <h1>PRECAUTIONS</h1><br>
+            <div class="clip2">
+                <h1 style="color: black;"> Precautions</h1><br>
+                {% for i in out[output][4] %}
+                <p>
+                <h2 style="color: white; font-weight: bold;">{{ i }}</h2><br>
+                </p>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

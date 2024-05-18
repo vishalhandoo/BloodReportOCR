@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Major Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="icon" type="image/png"
+    href="https://res.cloudinary.com/djnc4yixt/image/upload/v1674450401/bloodlogo_riccul.jpg" style="height: 200px">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="C:\Users\rajsi\Desktop\Blood-Report-Analysis-main\Blood-Report-Analysis-main\static\files\style.css">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); 
+
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--green);
+    --color: #9176FF;
+    --bg-color: #f4f4f4;
+}
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all .2s ease-out;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.profile {
+    height: auto;
+    width: auto;
+    align-items: center;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 23px;
+    font-stretch: condensed;
+    color: black;
+
+}
+.loginform {
+    padding-left: 300px;
+    height: 30vh;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+    background: #fff;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .3rem;
+    font-weight: bold;
+}
+
+.heading span {
+    text-transform: uppercase;
+    color: var(--red);
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: .5rem;
+    padding: 15px;
+    border: var(--border);
+    border-radius: .5rem;
+    /* box-shadow: var(--box-shadow); */
+    cursor: pointer;
+    font-size: 1.7rem;
+    background-color:white;
+    height: 10vh;
+}
+
+.btn-upload {
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #444;
+    border-radius: 5px;
+    color: #f4f4f4;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+}
+  
+.btn-upload:hover {
+    background: #03e9f4;
+    /* color: #fff;*/
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+        
+}
+  
+.btn-upload span {
+    position: absolute;
+    display: block;
+}
+  
+.btn-upload span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+.btn-upload span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+  
+@keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+}
+  
+.btn-upload span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+  
+@keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+}
+  
+.btn-upload span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+  
+@keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+}
+
+
+
+
+.header {
+    position: fixed;
+    top: 7;
+    left: 0;
+    right: 0;
+    box-shadow: 3px 3px #777;
+    display: flex;
+    align-items: center;
+    background: white;
+    height: 75px;
+    background-color: whitesmoke;
+    z-index: 999;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+.header .logo i {
+    background-image: url(C:\Users\Manojkumar\Downloads\PlacementWebsite\image\logo1.png);
+}
+
+.header .navbar a {
+    font-size: 2.1rem;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header .navbar a:hover {
+    color: var(--green);
+}
+.home {
+    display: flex;
+    align-items: right;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 10rem;
+}
+.home .content {
+    flex: 1 1 45rem;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    color: var(--green);
+    line-height: 1.8;
+    text-shadow: var(--text-shadow);
+}
+
+.home .content p {
+    font-size: 2.5rem;
+    color:var(--light-color); 
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.enroll-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 300px;
+
+   
+}
+.content p{
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+}
+.content p span{
+    color: black;
+    font-size: 30px;
+}
+
+/* about section*/
+
+.head h1{
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    color: #16a085; 
+    letter-spacing: .3rem;
+    
+} 
+
+
+.para{
+    font-size: 20px;
+    margin-top: 30px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+
+
+}
+#check{
+    display: none;
+} 
+
+#check:checked ~.hide{
+    display: block;
+}
+
+#check:checked ~.prem{
+    display: none;
+}
+.hide{
+    display: none;
+}
+.prem{
+    cursor: pointer;
+    color: white;
+    background-color:blue;
+    padding: 3px 13px;
+    border-radius: 5px;
+
+}
+
+.about-us img{
+    height: 50vh;
+    float:left;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 20px;
+    
+    
+}
+
+
+/* Team section */
+
+.swiper{
+  width: 100%;
+}
+
+.swiper-wrapper{
+  width: 100%;
+  height: 45em;
+  display: flex;
+  align-items: center;
+}
+
+.card{
+    width: 30em;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2em;
+  }
+  
+
+
+.card__image{
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    border: 5px solid var(--color);
+    padding: 3px;
+    margin-bottom: 2em;
+}
+  
+.card__image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.card__title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    color: #16a085;
+
+}
+
+.social{
+  font-size: 20px;
+  display: flex;
+}
+.icon1{
+  margin-right: 10px;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 30%;
+ 
+  
+}
+.card__name{
+  color: black;
+  font-size: 15px;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+.card__name1{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+} 
+
+
+/* footer */
+
+
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: var(--green);
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--light-color);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span {
+    color: var(--green);
+}
+
+.imagescom {
+    cursor: pointer;
+}
+
+#img1:hover {
+    border: 5px solid black;
+}
+
+/* media queries  */
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+  <!-- header section starts  -->
+
+  <header class="header">
+    <img src="https://res.cloudinary.com/dwkmbvfv7/image/upload/v1670333293/bloodlogo_nbuylq.jpg" class="logo-img" />
+    <h1 class="title"><i>Blood Report Analysis</i></h1>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <nav class="navbar">
+      <a href="#home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;home</a>
+      <a href="https://docs.google.com/presentation/d/1Ik0HsyY8Dqgyjj8TOTZh5ABBfLC436Q5/edit#slide=id.p1">&nbsp;&nbsp;&nbsp;&nbsp;PPT</a>
+      <a href="#about">&nbsp;&nbsp;&nbsp;&nbsp;about</a>
+      <a href="#team">&nbsp;&nbsp;&nbsp;&nbsp;Team</a>
+      <a href="#footer">&nbsp;&nbsp;&nbsp;&nbsp;contact</a>
+    </nav>
+  </header>
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+
+    <div class="content">
+      <h3>
+        <center><b>"New Way To Detect Health Condition </b><br> <b> from Blood Reports"</b></center>
+      </h3>
+      <center>
+        <p>Using <span>Machine Learning (LR) </span> </p>
+      </center>
+    </div>
+    <div class="enroll-form">
+      <h1 class="heading"> <span> Upload File</span> now </h1>
+    </div>
+    <div class="loginform">
+      <form method='POST' enctype='multipart/form-data'>
+        <div class="btn">
+          {{form.hidden_tag()}}
+          <input type="file" id="file-input" name="file">
+          <button type="submit" class="btn-upload" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>  
+            Upload
+          </button>
+
+
+        </div>
+      </form>
+
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+
+  <section id="about">
+
+
+
+    <div class="bg">
+      <div class="head">
+        <h1>About Us</h1>
+      </div>
+      <div class="about-us">
+        <img src="https://res.cloudinary.com/dp7tfd3nt/image/upload/v1675312294/health_wfy0xn.jpg" alt="#">
+      </div>
+      <div class="para">
+        <input id="check" type="checkbox">
+        <p><i>Vishal Handoo</i></p>
+        <p>Made the front End of the Project along with the Report and PPT</p>
+        <br>
+        <p><i>Mopuri Ayyappa Reddy</i>, <i>Abhinav Kumar Yadav</i></p>
+        <p>Made the  Research paper and some part of the report</p>
+        <br>
+        <p><i>Abhinav Kumar Yadav</i></p>
+        <p>Collaborated with Nachiketa Bharti to develop the ML part of the project</p>
+        <br>
+        <p><i>Nachiketa Bharti</i></p>
+        <p>Made the ML part and the main Logic behind the project</p>
+        <br>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Team section -->
+
+  
+
+  <div class="head">
+    <h1>Our Team</h1>
+  </div> 
+
+   <section class="swiper mySwiper team-carousal" id="team">
+
+    <div class="swiper-wrapper">
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="https://res.cloudinary.com/dp7tfd3nt/image/upload/v1677666809/img1_ce9lh4.jpg" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Vishal Handoo</span>
+          <span class="card__name1">12001530</span>
+          <div class="social">
+            <div class="icon1">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="https://www.linkedin.com/in/vishal-handoo9aa253/"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="https://res.cloudinary.com/dp7tfd3nt/image/upload/v1677666809/img1_ce9lh4.jpg" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Ayyappa Reddy</span>
+          <span class="card__name1">12018223</span>
+          <div class="social">
+            <div class="icon1">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="https://res.cloudinary.com/dp7tfd3nt/image/upload/v1677666809/img1_ce9lh4.jpg" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Abhinav Kumar Yadav</span>
+          <span class="card__name1">12013975</span>
+          <div class="social">
+            <div class="icon1">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="https://www.linkedin.com/in/kommari-surendra-b8abb924a"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="https://res.cloudinary.com/dp7tfd3nt/image/upload/v1677666809/img1_ce9lh4.jpg" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Nachiketa Bharti</span>
+          <span class="card__name1">12011895</span>
+          <div class="social">
+            <div class="icon1">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="https://www.linkedin.com/in/sudha-batna-5154a4244/3"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+    
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="https://res.cloudinary.com/dp7tfd3nt/image/upload/v1677666809/img1_ce9lh4.jpg" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Member Name</span>
+          <span class="card__name1">Put your Registrationn Number</span>
+          <span class="card__name">Put your Roll number</span>
+          <div class="social">
+            <div class="icon1">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="icon1">
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> 
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+   <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+  <!-- footer section -->
+
+
+ <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="D:\Placement Website\About Us.html"> <i class="fas fa-chevron-right"></i> Services </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> About </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> Team </a>
+            </div>
+
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="Put your mail id"> <i class="fas fa-envelope"></i>vishalhandoo067@gmail.com</a>
+                <a href="Put your mail id"> <i class="fas fa-envelope"></i>ayyappareddymopuri@gmail.com
+                </a>
+                <a href="Put your mail id"> <i class="fas fa-envelope"></i> abhinav.12013975@lpu.in
+                </a>
+              <a href="Put your mail id"> <i class="fas fa-envelope"></i> nachiketa.12011895@lpu.in
+                </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Andhra Pradesh, india - 521202 </a>
+            </div> 
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            </div>
+
+        </div>
+    </section> 
+
+
+</body>
+
+</html>
